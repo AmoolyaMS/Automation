@@ -1,0 +1,21 @@
+
+<suite name="Suite" parallel="tests">
+ <parameter name="url" value="http://localhost/login.do"/>
+  <test thread-count="5" name="Valid">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="un" value="admin"/>
+     <parameter name="pwd" value="manager"/>
+    <classes>
+      <class name="Parameterization.Parameterize"/>
+    </classes>
+  </test>
+  <test thread-count="5" name="Invalid">
+   <parameter name="browser" value="edge"/>
+    <parameter name="un" value="ad"/>
+     <parameter name="pwd" value="manage"/>
+    <classes>
+      <class name="Parameterization.Parameterize"/>
+    </classes>
+  </test> 
+ <!-- Test -->
+</suite> <!-- Suite -->
